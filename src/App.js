@@ -39,10 +39,7 @@ function todoReducer(tasks, action) {
       return tasks.map((todo) =>
         todo.id === action.id ? { ...todo, editing: true } : todo
       );
-    case "CANCEL_EDITING":
-      return tasks.map((todo) =>
-        todo.id === action.id ? { ...todo, editing: false } : todo
-      );
+   
     case "REMOVE_ALL_TODO":
       return [];
     default:
